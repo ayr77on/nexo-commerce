@@ -2,6 +2,10 @@
 
 This repository contains the complete Laravel application and a standalone interactive preview. The preview compiles to HTML, CSS, JavaScript, SVG, and font files. It requires no PHP runtime, Composer, database, API, or external CDN in production.
 
+**Live preview:** https://ayr77on.github.io/nexo-commerce/
+
+**Source repository:** https://github.com/ayr77on/nexo-commerce
+
 ## What visitors can do
 
 - Explore Overview, Orders, Customers, Products, and Settings.
@@ -70,18 +74,17 @@ The packaging script uses portable ZIP entry paths so the archive extracts corre
 
 No PHP or MySQL is provisioned by this workflow. The repository can still contain the complete Laravel implementation for code review.
 
-To initialize Git locally after reviewing the source and ignore rules:
+To clone the published project locally:
 
 ```powershell
-git init -b main
-git add .
-git status
-git commit -m "Add Nexo Commerce and interactive static demo"
-git remote add origin https://github.com/YOUR_USERNAME/nexo-commerce.git
-git push -u origin main
+git clone https://github.com/ayr77on/nexo-commerce.git
+cd nexo-commerce
+npm ci
+npm run build:demo
+npm run preview:demo
 ```
 
-Replace the repository URL with your own. A new remote repository and public deployment have not been created automatically.
+To publish updates, commit and push your changes to the main branch, then run **Publish static demo** from GitHub Actions. The workflow remains manual so publishing is deliberate.
 
 ## Connect your domain
 
@@ -97,4 +100,4 @@ The static preview is intentionally open to visitors and performs no real authen
 
 ## Verification
 
-`npm run test:demo` covers fixture consistency, order lifecycle, inventory rollback, local persistence, reset, CSV handling, and DOM-level navigation/forms. Chart rendering, visual layout, and real-browser accessibility still need manual browser review; browser-control tools were unavailable in the implementation session.
+`npm run test:demo` covers fixture consistency, order lifecycle, inventory rollback, local persistence, reset, CSV handling, and DOM-level navigation/forms. Chart rendering, visual layout, and real-browser accessibility still need manual browser review.

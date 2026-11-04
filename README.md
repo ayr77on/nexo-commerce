@@ -2,6 +2,8 @@
 
 A considered workspace for sales, customers, and inventory. Built as a complete Laravel portfolio application with a custom interface, connected business workflows, light/dark appearance, and responsive layouts.
 
+**[Explore the interactive demo](https://ayr77on.github.io/nexo-commerce/)** — sample data, browser-local changes, and no signup required.
+
 ## Interactive static preview
 
 The portfolio demo is also available as a standalone HTML/CSS/JavaScript build. It uses browser-local sample data and supports customer/product forms, inventory adjustments, the order lifecycle, CSV export, and light/dark appearance without PHP or MySQL.
@@ -61,8 +63,6 @@ Open **http://127.0.0.1:8000**. For frontend development use `npm run dev` in a 
 
 With XAMPP, the current checkout is also available at **http://localhost/adminTemplate/public/** when Apache and MySQL are running. For a deployed virtual host, point the document root directly at `public/`; the project root must not be exposed.
 
-The implementation environment included an old global Composer. A current local executable was downloaded to the ignored `.tools/composer.phar`; in this checkout, `php .tools/composer.phar install` is an alternative to the global `composer` command.
-
 ## Local demonstration accounts
 
 | Account | Email | Password |
@@ -91,7 +91,7 @@ powershell -NoProfile -File scripts/smoke-http.ps1
 powershell -NoProfile -File scripts/smoke-http.ps1 -BaseUrl http://127.0.0.1:8000
 ```
 
-The HTTP script checks authentication, CSRF, all workspace pages, a real Livewire search request, CSV export, and compiled assets. Visual browser QA and portfolio screenshots are pending because the computer-use tool could not verify the active Chrome URL.
+The HTTP script checks authentication, CSRF, all workspace pages, a real Livewire search request, CSV export, and compiled assets. The static preview has separate domain and DOM integration tests. Manual visual review and portfolio screenshots are pending.
 
 ## Business decisions
 

@@ -37,7 +37,7 @@ Capture the application after browser visual QA at 1440 × 1000, plus a 390 px m
 5. Inventory adjustment and movement history.
 6. Mobile overview and navigation.
 
-Screenshots and visual browser QA are still pending. Automated computer use could not confidently identify the active Chrome URL in the implementation environment.
+Screenshots and manual browser visual review are pending.
 
 ## Positioning
 
