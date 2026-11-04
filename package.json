@@ -1,0 +1,26 @@
+{
+    "name": "nexo-commerce",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "dev:demo": "node scripts/generate-demo-assets.mjs && vite --config vite.demo.config.js",
+        "build:demo": "node scripts/generate-demo-assets.mjs && vite build --config vite.demo.config.js",
+        "preview:demo": "vite preview --config vite.demo.config.js --host 127.0.0.1",
+        "pretest:demo": "node scripts/generate-demo-assets.mjs",
+        "test:demo": "node --test tests/static-demo/*.test.mjs"
+    },
+    "dependencies": {
+        "@fontsource/inter": "^5.2.0",
+        "@fontsource/manrope": "^5.2.0",
+        "chart.js": "^4.5.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.1.0",
+        "jsdom": "^26.1.0",
+        "laravel-vite-plugin": "^1.3.0",
+        "tailwindcss": "^4.1.0",
+        "vite": "^6.0.0"
+    }
+}
